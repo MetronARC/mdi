@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Marinternet Digital Internasional</title>
+    <meta name="title" content="Marinternet Digital Indonesia" />
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="MDI.png" type="image/svg+xml" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+  </head>
+
+  <body>
+    <!-- 
+    - #VIDEO BACKGROUND
+  -->
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="./assets/images/mdi-vid.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- 
+    - #HEADER
+  -->
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/mdi-nobg.png"
+            width="150"
+            height="30"
+            alt="Cryptoza home"
+          />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img
+                src="./assets/images/mdi-nobg.png"
+                width="185"
+                height="31"
+                alt="Cryptoza home"
+              />
+            </a>
+
+            <button
+              class="nav-close-btn"
+              aria-label="close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="#" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Services</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Resources</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Pricing</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Company</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <div class="overlay" data-overlay data-nav-toggler></div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="hero" aria-label="home">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="h1 hero-title">Providing your Digital Solutions</h1>
+
+              <p class="hero-text">
+                Your dedicated partner in providing seamless digital
+                solutions, designed to streamline operations, enhance
+                efficiency, and drive business growth through innovation and
+                technology
+              </p>
+              
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js" defer></script>
+
+    <!-- 
+    - ionicon-link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
