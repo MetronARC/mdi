@@ -51,3 +51,23 @@ const activeElemOnScroll = function () {
 }
 
 window.addEventListener("scroll", activeElemOnScroll);
+
+
+
+// Loading Screen and Fade-in Animation
+document.addEventListener('DOMContentLoaded', function() {
+  const loadingScreen = document.querySelector('.loading-screen');
+  const video = document.querySelector('.video-background video');
+  const heroContent = document.querySelector('.hero-content');
+
+  // Hide loading screen when video is loaded
+  video.addEventListener('loadeddata', function() {
+    setTimeout(() => {
+      loadingScreen.classList.add('fade-out');
+      // Show hero content after 3 seconds
+      setTimeout(() => {
+        heroContent.classList.add('visible');
+      }, 3000);
+    }, 500); // Small delay before hiding loading screen
+  });
+});
