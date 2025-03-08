@@ -71,3 +71,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500); // Small delay before hiding loading screen
   });
 });
+
+// Add dropdown functionality for mobile
+const dropdownItems = document.querySelectorAll('.has-dropdown');
+
+dropdownItems.forEach(item => {
+  item.addEventListener('click', function(e) {
+    if (window.innerWidth <= 991) {
+      e.preventDefault();
+      this.classList.toggle('active');
+    }
+  });
+});
