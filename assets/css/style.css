@@ -373,23 +373,24 @@ body.active { overflow-y: hidden; }
 
 /* Dropdown styles */
 .has-dropdown {
-  position: relative;
+  position: static;
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--eerie-black-1);
-  border-radius: var(--radius-8);
-  padding: 30px;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  transform: none;
+  background-color: rgba(0, 0, 0, 0.95);
+  border-radius: 0;
+  padding: 40px 0;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  min-width: 600px;
-  margin-top: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  margin-top: 0;
 }
 
 .has-dropdown:hover .dropdown-menu {
@@ -399,32 +400,51 @@ body.active { overflow-y: hidden; }
 
 .dropdown-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 60px;
 }
 
 .dropdown-column {
-  text-align: center;
+  text-align: left;
+  padding: 0 30px;
+  position: relative;
+}
+
+.dropdown-column:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .dropdown-title {
   color: var(--white);
   font-size: var(--fs-6);
   font-weight: var(--fw-700);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .dropdown-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .dropdown-link {
   color: var(--silver-sand);
   font-size: var(--fs-7);
   transition: color var(--transition);
-  padding: 5px;
+  padding: 5px 0;
 }
 
 .dropdown-link:hover {
@@ -440,7 +460,7 @@ body.active { overflow-y: hidden; }
     padding: 20px;
     opacity: 1;
     visibility: visible;
-    min-width: 100%;
+    width: 100%;
     margin-top: 15px;
     display: none;
   }
@@ -452,6 +472,15 @@ body.active { overflow-y: hidden; }
   .dropdown-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+    padding: 0;
+  }
+
+  .dropdown-column {
+    padding: 0;
+  }
+
+  .dropdown-column:not(:last-child)::after {
+    display: none;
   }
 }
 
