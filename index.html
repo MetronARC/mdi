@@ -31,10 +31,20 @@
       rel="stylesheet"
     />
 
-    <!-- 
-    - preload images
-  -->
-    <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+    <!-- Since we're using Helvetica now, we can remove the Google Fonts -->
+    
+    <script>
+      // Add this script to handle the loading screen
+      window.addEventListener('load', function() {
+        const loadingScreen = document.querySelector('.loading-screen');
+        if (loadingScreen) {
+          loadingScreen.classList.add('fade-out');
+          setTimeout(() => {
+            loadingScreen.style.display = 'none';
+          }, 500);
+        }
+      });
+    </script>
   </head>
 
   <body>
@@ -42,8 +52,7 @@
     - #LOADING SCREEN
   -->
     <div class="loading-screen">
-      <div class="loader"></div>
-      <p>Loading...</p>
+      <img src="./assets/images/mdi-nobg.png" alt="MDI Logo" class="breathing-logo">
     </div>
 
     <!-- 
